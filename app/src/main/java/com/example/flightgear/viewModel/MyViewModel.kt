@@ -10,7 +10,7 @@ class MyViewModel : ViewModel() {
     var ip = "10.0.2.2"
     var port = "6400"
 
-    fun setConnection(){
+    private fun setConnection(){
         viewModelScope.launch {
         model.connect(ip, port.toInt())
         }
@@ -34,6 +34,12 @@ class MyViewModel : ViewModel() {
     fun sendCommandEngine(engine: Float){
         viewModelScope.launch {
             model.send(Commands.Engine(value = engine.toDouble()).rCommand)
+        }
+    }
+
+    fun validateConnectionDetails(){
+        if(ip.isNotBlank() && port.isNotBlank()){
+            setConnection()
         }
     }
 
