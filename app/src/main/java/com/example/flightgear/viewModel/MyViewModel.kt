@@ -15,11 +15,11 @@ class MyViewModel : ViewModel() {
     }
 
     fun sendCommand(command: Commands){
-        model.send(command.resolvedCommand)
+        model.send(command.rCommand)
     }
 
     companion object {
-        const val ip = "127.0.0.1"
+        const val ip = "10.0.2.2"
         const val port = "6400"
     }
 }
