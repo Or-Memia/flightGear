@@ -4,12 +4,15 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flightgear.R
+import com.example.flightgear.viewModel.MyViewModel
 
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+        val vm: MyViewModel by viewModels()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -19,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         var timesClick = 0
         // set on-click listener
         btnConnetion.setOnClickListener {
+            vm.setConnection()
             timesClick += 1
             Toast.makeText(this@MainActivity, "you clicked me $timesClick", Toast.LENGTH_SHORT).show()
             myTextView.text = timesClick.toString()
