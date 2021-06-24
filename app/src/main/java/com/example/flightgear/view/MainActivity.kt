@@ -8,6 +8,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flightgear.R
 import com.example.flightgear.viewModel.MyViewModel
+import com.google.android.material.slider.Slider
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,14 +19,10 @@ class MainActivity : AppCompatActivity() {
 
         // get reference to button
         val btnConnetion = findViewById<Button>(R.id.button)
-        val myTextView = findViewById<TextView>(R.id.textView)
-        var timesClick = 0
         // set on-click listener
         btnConnetion.setOnClickListener {
             vm.setConnection()
-            timesClick += 1
-            Toast.makeText(this@MainActivity, "you clicked me $timesClick", Toast.LENGTH_SHORT).show()
-            myTextView.text = timesClick.toString()
+            val rudder = findViewById<Slider>(R.id.rudder)
         }
     }
 }

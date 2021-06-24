@@ -15,7 +15,9 @@ class MyViewModel : ViewModel() {
     }
 
     fun sendCommand(command: Commands){
-        model.send(command.rCommand)
+        viewModelScope.launch {
+            model.send(command.rCommand)
+        }
     }
 
     companion object {

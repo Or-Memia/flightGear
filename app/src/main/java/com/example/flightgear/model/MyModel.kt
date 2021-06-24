@@ -26,7 +26,9 @@ class MyModel {
         }
     }
 
-    fun send(resolvedCommand: String) {
-        out?.println(resolvedCommand)
+    suspend fun send(resolvedCommand: String) {
+        withContext(Dispatchers.IO){
+            out?.println(resolvedCommand)
+        }
     }
 }
