@@ -1,4 +1,4 @@
-package model
+package com.example.flightgear.model
 
 import java.io.IOException
 import java.io.PrintWriter

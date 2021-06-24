@@ -1,6 +1,6 @@
-package viewModel
+package com.example.flightgear.viewModel
 import androidx.lifecycle.ViewModel
-import model.MyModel
+import com.example.flightgear.model.MyModel
 
 class MyViewModel : ViewModel() {
     val model: MyModel = MyModel()

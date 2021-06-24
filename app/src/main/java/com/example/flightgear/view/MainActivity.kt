@@ -1,4 +1,4 @@
-package view
+package com.example.flightgear.view
 
 import android.os.Bundle
 import android.widget.Button
