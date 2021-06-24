@@ -1,12 +1,14 @@
 package com.example.flightgear.view
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flightgear.R
+import com.example.flightgear.util.Commands
 import com.example.flightgear.viewModel.MyViewModel
 import com.google.android.material.slider.Slider
 
@@ -23,6 +25,10 @@ class MainActivity : AppCompatActivity() {
         btnConnetion.setOnClickListener {
             vm.setConnection()
             val rudder = findViewById<Slider>(R.id.rudder)
+            rudder.addOnChangeListener { _, amount, _ ->
+                Log.i(":::MainActivity", "rudder = $amount / ${(amount.toInt() * 0.01)}")
+                vm.sendCommand(Commands.Rudder(value = (amount.toInt().toLong()/100)))
+            }
         }
     }
 }

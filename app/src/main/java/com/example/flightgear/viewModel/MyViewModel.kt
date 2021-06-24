@@ -20,6 +20,7 @@ class MyViewModel : ViewModel() {
         }
     }
 
+
     companion object {
         const val ip = "10.0.2.2"
         const val port = "6400"
