@@ -14,9 +14,24 @@ class MyViewModel : ViewModel() {
         }
     }
 
-    fun sendCommand(command: Commands){
+    fun sendCommandAileron(aileron: Float){
         viewModelScope.launch {
-            model.send(command.rCommand)
+            model.send(Commands.Aileron(value = aileron.toDouble()).rCommand)
+        }
+    }
+    fun sendCommandRudder(rudder: Float){
+        viewModelScope.launch {
+            model.send(Commands.Rudder(value = rudder.toDouble()).rCommand)
+        }
+    }
+    fun sendCommandElevator(elevator: Float){
+        viewModelScope.launch {
+            model.send(Commands.Elevator(value = elevator.toDouble()).rCommand)
+        }
+    }
+    fun sendCommandEngine(engine: Float){
+        viewModelScope.launch {
+            model.send(Commands.Engine(value = engine.toDouble()).rCommand)
         }
     }
 

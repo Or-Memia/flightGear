@@ -1,5 +1,7 @@
 package com.example.flightgear.util
 
+import kotlin.math.round
+
 const val base = "set /controls/flight"
 const val engine = "set /controls/flight/current-engine/throttle"
 
@@ -17,5 +19,5 @@ sealed class Commands(open val cmd: String, open val value: Double) {
         Commands(cmd, value)
 
     val rCommand: String
-        get() = "$cmd $value"
+        get() = "$cmd ${round(value * 100) / 100}"
 }
