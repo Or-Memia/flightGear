@@ -7,10 +7,12 @@ import kotlinx.coroutines.launch
 
 class MyViewModel : ViewModel() {
     val model: MyModel = MyModel()
+    var ip = "10.0.2.2"
+    var port = "6400"
 
     fun setConnection(){
         viewModelScope.launch {
-        model.connect(Companion.ip, Companion.port.toInt())
+        model.connect(ip, port.toInt())
         }
     }
 
@@ -36,8 +38,8 @@ class MyViewModel : ViewModel() {
     }
 
 
-    companion object {
-        const val ip = "10.0.2.2"
-        const val port = "6400"
-    }
+//    companion object {
+//        const val ip = "10.0.2.2"
+//        const val port = "6400"
+//    }
 }
