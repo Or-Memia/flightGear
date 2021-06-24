@@ -27,10 +27,11 @@ class MyModel {
     }
 
     suspend fun send(resolvedCommand: String) {
-        Log.i(TAG,"received $resolvedCommand")
-        withContext(Dispatchers.IO){
+        Log.i(TAG, "received $resolvedCommand")
+        withContext(Dispatchers.IO) {
             out?.let {
-            it.println(resolvedCommand)
+                it.print("${resolvedCommand}\r\n")
+                it.flush()
             }
         }
     }
