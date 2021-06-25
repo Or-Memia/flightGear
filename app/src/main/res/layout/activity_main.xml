@@ -62,6 +62,16 @@
             android:onClick="@{() -> viewmodel.validateConnectionDetails()}"
             />
 
+        <com.example.flightgear.view.JoystickView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="60dp"
+            />
+
         <com.google.android.material.slider.Slider
             android:id="@+id/rudder"
             android:layout_width="0dp"
