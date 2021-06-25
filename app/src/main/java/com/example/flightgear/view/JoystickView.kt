@@ -23,11 +23,15 @@ class JoystickView @JvmOverloads constructor(
     var circleRadius = 0f
     var center = PointF()
     var defaultCenter = PointF()
+    var mWidth = -1
+    var mHeight = 0
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         Log.i(":::JoystickView", "@onSizeChanged -> called wit w = $w h = $h")
         super.onSizeChanged(w, h, oldw, oldh)
-        circleRadius = minOf(w, h) / 4.0f
+        mWidth = w
+        mHeight = h
+        circleRadius = minOf(w, h) / 6.0f
         center = PointF(w / 2.0f, h / 2.0f)
         defaultCenter = PointF(w / 2.0f, h / 2.0f)
         invalidate()
@@ -39,8 +43,18 @@ class JoystickView @JvmOverloads constructor(
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         event?.let { e ->
+            Log.i(":::JoystickView", "@onTouchEvent -> got $e")
             when (e.action) {
-                MotionEvent.ACTION_MOVE -> updateView(e.x, e.y)
+                MotionEvent.ACTION_MOVE -> {
+                    val margin = circleRadius / 2
+                    if (e.x > (mWidth - margin) || e.x < margin
+                        || e.y > mHeight - margin || e.y < margin
+                    ) {
+                        return true
+                    } else {
+                        updateView(e.x, e.y)
+                    }
+                }
                 MotionEvent.ACTION_UP -> resetView()
                 else -> {
                     /*ignore*/
@@ -51,6 +65,7 @@ class JoystickView @JvmOverloads constructor(
     }
 
     private fun resetView() {
+        Log.i(":::JoystickView", "@resetView -> called")
         center = defaultCenter
         invalidate()
     }
@@ -59,7 +74,6 @@ class JoystickView @JvmOverloads constructor(
         center = PointF(x, y)
         invalidate()
     }
-
 
 
 }
