@@ -54,5 +54,5 @@ In order to use our simulator app, please follow the steps below:
 ## Video Explanation
 
 ## Authors
-* Or Memiya
+* Or Memia
 * Dvir Asaf
