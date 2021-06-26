@@ -1,4 +1,4 @@
-# Anomaly Detection Android App
+# Remote Control Joystick Android App 
 ## Introduction
 In this Android app, the user is allowed to control a Flight Gear simulator using a remote control for the Joystick in
 the flight gear.
