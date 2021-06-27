@@ -1,3 +1,4 @@
+![android device](https://user-images.githubusercontent.com/59093573/123536689-91d72780-d734-11eb-9a97-168f23da43e1.jpg)
 # Remote Control Joystick Android App 
 ## Introduction
 In this Android app, the user is allowed to control a Flight Gear simulator using a remote control for the Joystick in
@@ -48,6 +49,7 @@ In order to use our simulator app, please follow the steps below:
 
 ![image](https://user-images.githubusercontent.com/59093573/123443124-46ab0080-d5de-11eb-98ab-b5040891ad1a.png)
 
+![android device](https://user-images.githubusercontent.com/59093573/123536693-969bdb80-d734-11eb-8497-f23ca00074d6.jpg)
 
 
 ## Code Design and UML:
