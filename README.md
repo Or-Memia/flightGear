@@ -3,7 +3,7 @@
 In this Android app, the user is allowed to control a Flight Gear simulator using a remote control for the Joystick in
 the flight gear.
 
-## MMVM Design Pattern
+## MVVM Design Pattern
 The app is based on the MMVM design pattern, which has 3 main components:
 1. Model:  responsible to implement the algorithm that processing the data and transfer it to the FlightGear
    server
