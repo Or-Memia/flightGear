@@ -53,6 +53,9 @@ In order to use our simulator app, please follow the steps below:
 
 ## Code Design and UML:
 
+![uml](https://user-images.githubusercontent.com/59093573/123538678-bcc67900-d73e-11eb-86fc-ae105002fda8.jpg)
+
+
 ## Video Explanation
 
 https://youtu.be/uNmJa99AYAk
