@@ -24,7 +24,7 @@ In order to use our simulator app, please follow the steps below:
 
     * go to Settings -> Additional settings.
       Then, in the text box at the bottom, paste the following text:
-      ``--telnet=socket,in,10,127.0.0.1,6400,tcp``
+       ``--telnet=socket,in,10,127.0.0.1,6400,tcp``
 
 ![image](https://user-images.githubusercontent.com/59093573/123442241-5a099c00-d5dd-11eb-9f1e-50394665afc2.png)
 
