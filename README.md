@@ -1,11 +1,11 @@
-![android device](https://user-images.githubusercontent.com/59093573/123536689-91d72780-d734-11eb-9a97-168f23da43e1.jpg)
+
 # Remote Control Joystick Android App 
 ## Introduction
 In this Android app, the user is allowed to control a Flight Gear simulator using a remote control for the Joystick in
 the flight gear.
 
 ## MVVM Design Pattern
-The app is based on the MMVM design pattern, which has 3 main components:
+The app is based on the MVVM design pattern, which has 3 main components:
 1. Model:  responsible to implement the algorithm that processing the data and transfer it to the FlightGear
    server
 2. View: The visual graphic interface that is displayed to the users.
@@ -47,7 +47,6 @@ In order to use our simulator app, please follow the steps below:
 4. Now, using the app, you should be able to control the aircraft by using the two sliders of the throttle and
    the rudder.
 
-![image](https://user-images.githubusercontent.com/59093573/123443124-46ab0080-d5de-11eb-98ab-b5040891ad1a.png)
 
 ![android device](https://user-images.githubusercontent.com/59093573/123536693-969bdb80-d734-11eb-8497-f23ca00074d6.jpg)
 
