@@ -55,6 +55,13 @@ In order to use our simulator app, please follow the steps below:
 
 ![uml](https://user-images.githubusercontent.com/59093573/123538678-bcc67900-d73e-11eb-86fc-ae105002fda8.jpg)
 
+## Video Presentation And Explanation
+
+https://youtu.be/1s4YRsgLwvc
+
+## Video Presentation
+
+https://youtu.be/rRVr9Poh9yU
 
 ## Video Explanation
 
